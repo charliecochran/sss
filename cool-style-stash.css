@@ -1,0 +1,40 @@
+html {
+	font-family: 'ABeeZee', sans-serif;
+}
+
+h1 {
+	margin:0;
+}
+
+h2 {
+	font-size:1em;
+	font-style:italic;
+	margin:0;
+}
+
+article, nav {
+	max-width: 600px;
+}
+
+nav {
+	text-align:right;
+}
+
+pre {
+	tab-size:2;
+}
+
+iframe {
+	border:0;
+	padding:0;
+	margin:0;
+	width:100%;
+}
+
+.demo {
+	background:url('demo-header.jpg') no-repeat left top;
+	border:1px solid #676c73;
+	margin:0 auto;
+	padding:60px 0 0 0;
+	width:560px;
+}

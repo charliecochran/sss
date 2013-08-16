@@ -1,0 +1,9 @@
+{
+  "name": "stuff-style-stash",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-ember-templates": "0.4.9",
+    "grunt-contrib-watch": "~0.5.2"
+  }
+}

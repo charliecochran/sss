@@ -28,6 +28,5 @@ module.exports = function (grunt) {
 	
 	// Default task(s).
 	grunt.registerTask('default', ['emberTemplates']);
-	grunt.registerTask('watch', ['watch']);
 
 };

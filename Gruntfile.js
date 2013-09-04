@@ -3,6 +3,12 @@ module.exports = function (grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		concat: {
+			controllers: {
+				src: ['js/controllers/*.js'],
+				dest: 'js/controllers.js'
+			}
+		},
 		emberTemplates: {
 			compile: {
 				files: {
@@ -16,6 +22,10 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
+			concat: {
+				files: 'js/controllers/*.js',
+				tasks: ['concat:controllers']
+			},
 			emberTemplates: {
 				files: 'js/templates/*.hbs',
 				tasks: ['emberTemplates']
@@ -23,6 +33,7 @@ module.exports = function (grunt) {
 		}
 	});
 	
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-ember-templates');
 	

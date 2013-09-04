@@ -4,6 +4,7 @@
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-ember-templates": "0.4.9",
-    "grunt-contrib-watch": "~0.5.2"
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-concat": "~0.3.0"
   }
 }

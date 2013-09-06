@@ -1,6 +1,8 @@
 node_modules/
 js/controllers.js
+js/routes.js
 js/templates.js
+js/views.js
 
 #################
 ## Eclipse

@@ -1,4 +1,5 @@
 App.Router.map(function () {
-	this.route('chapter-01');
-	this.route('chapter-02');
+	this.route('next');
+	this.route('previous');
+	this.route('chapter', { path: '/chapter/:id' });
 });

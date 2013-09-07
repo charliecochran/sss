@@ -1,0 +1,11 @@
+<article>
+	{{view Ember.ContainerView currentViewBinding="chapterView"}}
+</article>
+<nav>
+	{{#if hasPrevious}}
+		{{#link-to 'chapter' previousChapter}}Previous{{/link-to}}
+	{{/if}}
+	{{#if hasNext}}
+		{{#link-to 'chapter' nextChapter}}Next{{/link-to}}
+	{{/if}}
+</nav>

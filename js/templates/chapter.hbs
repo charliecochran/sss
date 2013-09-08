@@ -1,11 +1,11 @@
 <article>
 	{{view Ember.ContainerView currentViewBinding="chapterView"}}
 </article>
-<nav>
+<ul class="pager">
 	{{#if hasPrevious}}
-		{{#link-to 'chapter' previousChapter}}Previous{{/link-to}}
+		<li class="previous">{{#link-to 'chapter' previousChapter}}&larr; Previous{{/link-to}}</li>
 	{{/if}}
 	{{#if hasNext}}
-		{{#link-to 'chapter' nextChapter}}Next{{/link-to}}
+		<li class="next">{{#link-to 'chapter' nextChapter}}Next &rarr;{{/link-to}}</li>
 	{{/if}}
-</nav>
+</ul>

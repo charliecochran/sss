@@ -7,7 +7,7 @@
 
 <h4>What is a tag?</h4>
 <p>
-	When I was first learning my greater than and less than comparisons as a child, I was taught that
+	When I was first learning my greater than and less than comparisons as a kid, I was taught that
 	<code>&lt;</code> and <code>&gt;</code> were alligator mouths eating the bigger number. So whichever
 	way the "mouth" was facing toward was the bigger number. To this day whenever I see one of these
 	signs I think "alligator mouth."
@@ -17,7 +17,8 @@
 	So whenever you see something <strong>being eaten by alligators from both ends</strong>, think
 	<em>tag</em>:
 </p>
-<pre class="prettify lang-html">&lt;helpme&gt;</pre>
+<pre class="prettyprint lang-html">&lt;helpme&gt;</pre>
+<script>prettyPrint();</script>
 <p>
 	You can make up tags all you like (as I've just done above), but a browser won't know what to do with
 	a <code>&lt;helpme&gt;</code> tag, so it will just ignore it. In order for the browser to understand
@@ -29,11 +30,34 @@
 	I'm sorry, <code>&lt;helpme&gt;</code> is not a valid option, please try again.
 </blockquote>
 <p>
-	Or something like that.
+	Or something like that. More on this later.
 </p>
 <h4>Tags come in <strike style="font-weight:normal;">all</strike> <em>two</em> different shapes and sizes!</h4>
 <p>
-	Typical summer movie, where plot closure is all but guaranteed between the opening and closing credits.
-	And Cliffhangers, symbolic of the rugged individualism of the great Wild West of the 1800s, where closure you
-	will certainly not receive.
+	Most tags are what I like to call <em>sandwich tags</em>:
 </p>
+<pre class="prettyprint lang-html">&lt;bun&gt;bacon, lettuce, tomato&lt;/bun&gt;</pre>
+<script>prettyPrint();</script>
+<p>
+	What you have is an opening tag (<code>&lt;bun&gt;</code>) followed by all the fillings of the tag sandwich
+	(<code>bacon, lettuce, tomato</code>) and finished off by the closing tag (<code>&lt;/bun&gt;</code>). The
+	slash is how you tell the browser that this tag sandwich is finished and ready to be served to the customer.
+	Think of it like the toothpick with the plastic frilly stuff on one end that holds the sandwich
+	together&mdash;the finishing touch.
+</p>
+<blockquote>/ = frilly toothpick</blockquote>
+<p>
+	The remaining tags are the rugged individualists of the HTML world. Let's call them <em>burrito tags</em>.
+	When his high school girlfriend broke up with him suddenly at homecoming, <em>burrito tag</em> didn't call
+	her 42 times over the weekend looking for closure. <em>Burrito tag</em> don't need no closure,
+	<em>burrito tag</em> closes <em>himself</em>. <em>Burrito tag</em> scoffs at <em>sandwich tag</em>, "Bro,
+	why you need them <em>two</em> pieces of bread? Just takes <em>one</em> tortilla, man."
+</p>
+<pre class="prettyprint lang-html">&lt;burrito&gt;</pre>
+<script>prettyPrint();</script>
+<p>
+	Unlike sandwiches, burritos don't <em>need</em> frilly toothpicks (they're totally cool with it either way),
+	but some chefs still like to put them in their burritos so they don't get mistaken for unfinished sandwiches:
+</p>
+<pre class="prettyprint lang-html">&lt;burrito /&gt;</pre>
+<script>prettyPrint();</script>

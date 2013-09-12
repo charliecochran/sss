@@ -3,6 +3,7 @@ js/controllers.js
 js/routes.js
 js/templates.js
 js/views.js
+build/
 
 #################
 ## Eclipse

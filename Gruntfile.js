@@ -19,8 +19,8 @@ module.exports = function (grunt) {
 			appjs: {
 				src: [
 					'js/libs/jquery-1.10.2.min.js',
-					'js/libs/handlebars-1.0.0.js',
-					'js/libs/ember-1.0.0.js',
+					'js/libs/handlebars.min.js',
+					'js/libs/ember.min.js',
 					'js/libs/prettify.js',
 					'js/app.js',
 					'js/templates.js',

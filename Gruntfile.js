@@ -63,8 +63,8 @@ module.exports = function (grunt) {
 		},
 		watch: {
 			concat: {
-				files: ['js/controllers/*.js', 'js/routes/*.js', 'js/views/*.js', 'css/*.css'],
-				tasks: ['concat:controllers', 'concat:routes', 'concat:views', 'concat:appjs', 'concat:appcss']
+				files: ['js/*.js', 'js/controllers/*.js', 'js/routes/*.js', 'js/views/*.js', 'css/*.css'],
+				tasks: ['concat', 'copy']
 			},
 			emberTemplates: {
 				files: 'js/templates/*.hbs',

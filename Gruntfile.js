@@ -19,6 +19,10 @@ module.exports = function (grunt) {
 			appjs: {
 				src: [
 					'js/libs/jquery-1.10.2.min.js',
+					'js/libs/ace.js',
+					'js/libs/ext-emmet.js',
+					'js/libs/editr/libs/ext.emmet.js',
+					'js/libs/editr/editr.js',
 					'js/libs/handlebars.min.js',
 					'js/libs/ember.min.js',
 					'js/libs/prettify.js',
@@ -36,6 +40,7 @@ module.exports = function (grunt) {
 					'css/bootstrap.min.css',
 					'css/prettify.css',
 					'css/sunburst.css',
+					'css/editr.css',
 					'css/style.css'
 				],
 				dest: 'build/sss.css'

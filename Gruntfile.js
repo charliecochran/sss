@@ -57,13 +57,23 @@ module.exports = function (grunt) {
 		emberTemplates: {
 			compile: {
 				files: {
-					'js/templates.js': 'js/templates/*.hbs'
+					'js/templates.js': 'js/templates/tmp/*.hbs'
 				},
 				options: {
 					templateName: function (sourceFile) {
-						return sourceFile.replace(/js\/templates\//, '');
+						return sourceFile.replace(/js\/templates\/tmp\//, '');
 					}
 				}
+			}
+		},
+		includes: {
+			files: {
+				src: 'js/templates/*.hbs',
+				dest: 'js/templates/tmp',
+				flatten:true
+			},
+			options: {
+				includePath: 'public/examples'
 			}
 		},
 		watch: {
@@ -82,8 +92,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-ember-templates');
+	grunt.loadNpmTasks('grunt-includes');
 	
 	// Default task(s).
-	grunt.registerTask('default', ['emberTemplates', 'concat', 'copy']);
+	grunt.registerTask('default', ['includes', 'emberTemplates', 'concat', 'copy']);
 
 };

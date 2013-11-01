@@ -93,6 +93,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-ember-templates');
 	grunt.loadNpmTasks('grunt-includes');
+	grunt.loadNpmTasks('grunt-replace');
 	
 	// Default task(s).
 	grunt.registerTask('default', ['includes', 'emberTemplates', 'concat', 'copy']);

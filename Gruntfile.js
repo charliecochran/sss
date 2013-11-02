@@ -3,6 +3,10 @@ module.exports = function (grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		clean: {
+			build: 'build',
+			templates: 'js/templates/tmp'
+		},
 		concat: {
 			controllers: {
 				src: ['js/controllers/*.js'],
@@ -81,15 +85,16 @@ module.exports = function (grunt) {
 		watch: {
 			concat: {
 				files: ['js/*.js', 'js/controllers/*.js', 'js/routes/*.js', 'js/views/*.js', 'css/*.css'],
-				tasks: ['concat', 'copy']
+				tasks: ['clean:build', 'concat', 'copy']
 			},
 			emberTemplates: {
-				files: 'js/templates/*.hbs',
-				tasks: ['emberTemplates']
+				files: ['js/templates/*.hbs', 'public/examples/**/*.html'],
+				tasks: ['clean:templates', 'includereplace:examples', 'emberTemplates']
 			}
 		}
 	});
 	
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -97,6 +102,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-include-replace');
 	
 	// Default task(s).
-	grunt.registerTask('default', ['includereplace:examples', 'emberTemplates', 'concat', 'copy']);
+	grunt.registerTask('default', ['clean', 'includereplace:examples', 'emberTemplates', 'concat', 'copy']);
 
 };

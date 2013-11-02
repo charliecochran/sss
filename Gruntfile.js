@@ -66,14 +66,16 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		includes: {
-			files: {
-				src: 'js/templates/*.hbs',
+		includereplace: {
+			examples: {
+				options: {
+					prefix: '',
+					includesDir: 'public/examples'
+				},
+				cwd: 'js/templates',
+				src: '*.hbs',
 				dest: 'js/templates/tmp',
-				flatten:true
-			},
-			options: {
-				includePath: 'public/examples'
+				expand: true
 			}
 		},
 		watch: {
@@ -92,10 +94,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-ember-templates');
-	grunt.loadNpmTasks('grunt-includes');
-	grunt.loadNpmTasks('grunt-replace');
+	grunt.loadNpmTasks('grunt-include-replace');
 	
 	// Default task(s).
-	grunt.registerTask('default', ['includes', 'emberTemplates', 'concat', 'copy']);
+	grunt.registerTask('default', ['includereplace:examples', 'emberTemplates', 'concat', 'copy']);
 
 };

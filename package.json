@@ -1,6 +1,16 @@
 {
   "name": "stuff-style-stash",
   "version": "0.0.1",
+	"description": "Stuff, Style, and Spark! An introduction to HTML, CSS, and JavaScript.",
+	"author": "Charlie Cochran <charlie.cochran@gmail.com> (http://www.charliecochran.com/)",
+	"homepage": "https://github.com/charliecochran/sss",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/charliecochran/sss.git"
+	},
+	"bugs": {
+		"url": "https://github.com/charliecochran/sss/issues"
+	},
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-ember-templates": "0.4.13",

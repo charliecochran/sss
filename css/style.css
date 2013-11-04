@@ -4,3 +4,27 @@ pre {
 article h4 {
 	margin-top:28px;
 }
+pre.prettyprint {
+	border:0;
+}
+.example {
+	border: 1px solid #000;
+	border-radius:10px;
+	padding:0;
+}
+.example .prettyprint {
+	border-radius:8px 8px 0 0;
+	margin:0;
+}
+.example iframe {
+	border:0;
+	height:40px;
+	margin:0;
+	width:100%;
+}
+.example iframe.medium {
+	height:150px;
+}
+.example iframe.large {
+	height:300px;
+}

@@ -5,7 +5,12 @@ App.ChapterController = Em.ObjectController.extend({
 	hasPrevious: false,
 	chapterView: null,
 	slugChanged: function () {
-		this.set('chapterView', Ember.View.create({ templateName: this.get('slug') }));
+		this.set('chapterView', Ember.View.create({
+			didInsertElement: function() {
+				prettyPrint();
+			},
+			templateName: this.get('slug')
+		}));
 	}.observes('slug'),
 	nextPreviousChanged: function () {
 		this.set('nextChapter', App.chapters.findBy('id', this.get('next')));

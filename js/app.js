@@ -24,9 +24,16 @@ App.chapters = Em.A([
 	},
 	{
 		id: '4',
-		next: null,
+		next: '5',
 		previous: '3',
 		slug: 'chapter-04',
-		title: 'Elements'
+		title: 'The Textual Elements'
+	},
+	{
+		id: '5',
+		next: null,
+		previous: '4',
+		slug: 'chapter-05',
+		title: 'Necessary Elements'
 	}
 ]);

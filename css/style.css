@@ -6,6 +6,7 @@ article h4 {
 }
 pre.prettyprint {
 	border:0;
+	word-break:normal;
 }
 .example {
 	border: 1px solid #000;
